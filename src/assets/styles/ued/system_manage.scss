@@ -1,0 +1,325 @@
+// 系统管理
+.system-manage, .system-perserve,.system-perserve-host ,.config-manage, .history-version, .preserve-content-host, .new-config {
+    height: 100%;
+    box-sizing: border-box;
+    color: #333333;
+    background-color: #fff;
+    // box-shadow: 0px 4px 14px 0px 
+	// 	rgba(42, 42, 42, 0.14);
+	// border-radius: 8px;
+    .content-hander {
+        display: inline-block;
+        padding-left: 34px;
+        border-bottom: 1px solid #ebecec;
+        line-height: 63px;
+        color: #575962;
+        width: 100%;
+        font-weight: bold;
+    }
+    main {
+        padding: 20px;
+
+    }
+
+    //btn
+    .upload-btn {
+        i {
+            background: url('@/assets/images/manage/upload_nomal.png') no-repeat;
+        }
+        &:hover {
+            i {
+                background: url('@/assets/images/manage/upload_hover.png') no-repeat;
+            }
+        }
+    }
+    .create-system-btn { // 创建系统
+        i {
+            background: url('@/assets/images/common/create_system_nomal.png') no-repeat;
+            margin-right: 4px;
+            height: 18px;
+        }
+        &:hover {
+            i {
+                background: url('@/assets/images/common/create_system_hover.png') no-repeat;
+
+            }
+        }
+    }
+    .btn-config { // 系统配置
+        i {
+            background: url('@/assets/images/manage/system_config_nomal.png') no-repeat;
+        }
+        &:hover {
+            i {
+                background: url('@/assets/images/manage/system_config_hover.png') no-repeat;
+            }
+        }
+    }
+    .btn-resource { // 系统资源规划 
+        i {
+            background: url('@/assets/images/manage/system_plan_nomal.png') no-repeat;
+        }
+        &:hover {
+            i {
+                background: url('@/assets/images/manage/system_plan_hover.png') no-repeat;
+            }
+        }
+    }
+}
+.system-manage {
+    .header {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #ebecec;
+        padding-bottom: 20px;
+        /deep/.el-input {
+            width: 300px;
+            .el-input__wrapper {
+              border-radius: 16px;
+            }
+        }
+      
+    }
+    .copy {
+        position: absolute;
+        right: 20px;
+        z-index: 1002;  
+        top: 162px;
+        margin-right: 0;
+        i {
+            margin-right: 2px;
+            background: url('@/assets/images/manage/copy_nolmal.png') no-repeat;
+        }
+        &:hover {
+            i {
+                background: url('@/assets/images/manage/copy_hover.png') no-repeat;
+            }
+        }
+    }
+    .el-tabs {
+        margin-top: 20px;
+    }
+    .el-tabs__header  {
+        margin-bottom: 20px;
+    }
+    .el-tabs__nav-wrap::after {
+        display: none;
+    }
+    .el-tabs__nav-scroll {
+        .el-tabs__active-bar {
+            display: none;
+        }
+        .el-tabs__nav  {
+            border-radius: 5px;
+            border: solid 1px #d9dbdb;
+            overflow: hidden;
+            .is-active {
+                background-color: #0675f1;
+                color: #fff;
+            }
+            .el-tabs__item  {
+                padding: 0 20px;
+            }
+        }
+      
+    }
+    .el-pagination {
+        margin-top: 10px;
+        float: right;
+    }
+}
+.system-plan {
+    .from-title-border {
+        border-bottom: 1px solid #e1e3e4;
+    }
+    .el-input__wrapper {
+        padding-right: 0;
+    }
+    .el-input {
+        width: 85%;
+    }
+   .el-form .el-form-item__label {
+        width: 80px !important;
+    }
+    .from-item-tail {
+        margin-left: 10px;
+    }
+}
+// 系统维护
+.system-perserve-host, .system-perserve {
+    .info {
+        background-color: #fafafa;
+        border-radius: 6px;
+        padding: 10px;
+        margin: 10px 0;
+        p {
+            margin-bottom: 8px;
+        }
+
+       .btn-role {
+            i {
+                background: url('@/assets/images/manage/role_nomal.png') no-repeat;
+            }
+            &:hover {
+                i {
+                    background: url('@/assets/images/manage/role_hover.png') no-repeat;
+                }
+            }
+       }
+       .btn-editor {
+        i {
+            background: url('@/assets/images/manage/editor_nomal.png') no-repeat;
+        }
+        &:hover {
+            i {
+                background: url('@/assets/images/manage/editor_hover.png') no-repeat;
+            }
+        }
+   }
+    }
+    .el-dropdown .el-button {
+        background-color: #fff;
+        color: #73777a;
+        border: solid 1px #d9dbdb;
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 16px;
+            background: url('@/assets/images/manage/add_service_nomal.png') no-repeat;
+        }
+        &:hover {
+            color: #fff;
+            background-color: #0675f1;
+            border: solid 1px #0675f1;
+            &::before {
+                background: url('@/assets/images/manage/add_service_hover.png') no-repeat;
+            }
+        }
+    }
+}
+.system-perserve-host {
+    .preserve-content-host {
+        display: flex;
+        justify-content: space-between;
+        box-sizing: border-box;
+        & > div {
+            height: 100%;
+            padding: 10px 20px;
+            box-sizing: border-box;
+    
+        }
+        .lf {
+            width: 55%;
+        }
+        .rg {
+            width: calc(45% - 20px);
+            p {
+                margin-bottom: 20px;
+                font-weight: bold;
+                i {
+                    display: inline-block;
+                    width: 3px;
+                    height: 10px;
+                    background-color: #0675f1;
+                    margin-right: 8px;
+                }
+            }
+        }
+        .lf-input {
+            display: flex;
+            margin-bottom: 16px;
+            justify-content: space-between;
+            /deep/.el-input {
+                width: 300px;
+                .el-input__wrapper {
+                    border-radius: 16px;
+                }
+            }
+        }
+    } 
+}
+.system-perserve {
+    .preserve-content {
+        .header {
+            .title-info {
+                padding: 10px;
+                margin: 10px 0;
+            }
+        }
+        .preserve-conditions {
+            padding: 12px 0;
+            .btn-resource {
+                margin-left: 12px;
+            }
+            /deep/.el-input {
+                width: 300px;
+                // margin-right: 16px;
+            }
+            .con-left {
+                float: right;
+            }
+      
+        }
+    }
+}
+
+
+// 配置管理
+.config-manage {
+    .hander {
+        margin-bottom: 10px;
+    }
+    /deep/.el-input {
+        width: 300px;
+    }
+    .el-input {
+        float: right;
+        .el-input__wrapper {
+            border-radius: 16px;
+        }
+    }
+}
+// 历史版本
+.history-version {
+    .hander {
+        margin-bottom: 26px;
+    }
+    .el-select {
+        margin: 0 16px;
+    }
+    .search-btn {
+        display: inline-block;
+        padding: 0 10px;
+        line-height: 32px;
+        color: #fff;
+        background-color: #1869f5;
+        border-radius: 4px;
+        cursor: pointer;
+        i {
+            vertical-align: middle;
+        }
+    }
+}
+// 添加/编辑 配置
+.new-config {
+    .config-row {
+        display: flex;
+        .el-input {
+            width: 350px;
+        }
+        .el-form-item  + .el-form-item  {
+            margin-left: 26px;
+        }
+    }
+    .el-form-item__label {
+        width: 80px;
+        font-size: 16px;
+    }
+    .footer {
+        overflow: hidden;
+        span {
+            float: right;
+        }
+    }
+}

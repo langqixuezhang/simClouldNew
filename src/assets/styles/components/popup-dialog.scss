@@ -1,0 +1,160 @@
+// 弹窗样式
+$--color-bg: rgba(4, 10, 32, 0.95);
+$--color-shadow: rgba(62, 80, 123, 0.7);
+$--color-box-shadow: #070f29;
+
+.alert-box {
+  position: relative;
+  box-sizing: border-box;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  border: solid $--color-border;
+  border-width: 0px 1px 1px 1px;
+  box-shadow: -15px 15px 15px -15px $--color-box-shadow,
+    15px 15px 15px -15px $--color-box-shadow;
+    
+.header {
+    width: 100%;
+    height: 8px;
+    transform: translateY(-1px);
+  
+    .left {
+      width: 94px;
+      height: 8px;
+      float: left;
+      border: solid $--color-border;
+      border-width: 1px 0px 0 0;
+      background-color: $--color-bg;
+      position: relative;
+      box-shadow: 15px 0px 15px -15px $--color-shadow inset;
+      &::after {
+        content: '';
+        position: absolute;
+        right: -8px;
+        top: 0;
+        display: block;
+        width: 0;
+        height: 0;
+        border-color: $--color-bg transparent;
+        border-width: 0 8px 8px 0px;
+        border-style: solid;
+        z-index: 1;
+      }
+    }
+    .right {
+      @extend .left;
+      float: right;
+      box-shadow: -15px 0px 15px -15px $--color-shadow inset;
+      &::after {
+        left: -8px;
+        border-width: 0 0 8px 8px;
+      }
+    }
+    .middle {
+      margin-top: 4px;
+      margin-left: 96px;
+      margin-right: 96px;
+      height: 5px;
+      box-sizing: border-box;
+      position: relative;
+      box-shadow: 0px -10px 10px -10px $--color-box-shadow;
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 7px;
+        bottom: 0;
+        width: calc(100% - 18px);
+        height: 1px;
+        background-color: $--color-border;
+        box-shadow: 0px 1px 5px 1px $--color-shadow;
+      }
+      .case-left {
+        float: left;
+        width: 20%;
+        height: 5px;
+        background: url('../../assets/images/dialog-image/header/case-right.png')
+          no-repeat;
+        background-size: 80% 5px;
+      }
+      .case-right {
+        float: right;
+        width: 20%;
+        height: 5px;
+        background: url('../../assets/images/dialog-image/header/case-left.png')
+          no-repeat right top;
+        background-size: 80% 5px;
+      }
+      .case-middle {
+        position: absolute;
+        left: 50%;
+        top: -1px;
+        margin-left: -90px;
+        width: 180px;
+        height: 5px;
+        background: url('../../assets/images/dialog-image/header/case-mid.png')
+          no-repeat;
+        background-size: 180px 5px;
+      }
+    }
+    .header-hot-tip-left {
+      position: absolute;
+      left: 26px;
+      top: 5px;
+      width: 70px;
+      height: 12px;
+      background: url('../../assets/images/dialog-image/header/case-header-hot-left.png')
+        no-repeat;
+    }
+    .header-hot-tip-right {
+      position: absolute;
+      right: 26px;
+      top: 5px;
+      width: 70px;
+      height: 12px;
+      background: url('../../assets/images/dialog-image/header/case-header-hot-right.png')
+        no-repeat;
+    }
+  }
+  .content {
+    flex: 1;
+    padding: 14px 20px 20px 20px;
+    background-color: $--color-bg;
+    box-shadow: -16px -16px 16px -16px $--color-shadow inset,
+      16px -16px 16px -16px $--color-shadow inset;
+  }
+  
+  .alertHeader {
+    height: 35px;
+    line-height: 40px;
+    text-align: left;
+    color: #ffffff;
+    font-size: 13px;
+    display: flex;
+    box-sizing: border-box;
+    padding: 0 10px;
+    justify-content: space-between;
+    user-select: none;
+    margin-top: -10px;
+  }
+  .h-dialog__close:hover {
+    color: #fff;
+  }
+  .h-dialog__close {
+    color: #ccc;
+  }
+  .titleText {
+    text-align: center;
+    font-family: STXihei;
+    font-size: 20px;
+    font-weight: bold;
+    font-stretch: normal;
+    line-height: 33px;
+    letter-spacing: 0px;
+    color: #ffffff;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}

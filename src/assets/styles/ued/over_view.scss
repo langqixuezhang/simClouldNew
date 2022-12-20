@@ -1,0 +1,307 @@
+// 系统预览
+.view-content {
+    display: flex;
+    justify-content: space-between;
+    height: 100% ;
+    box-sizing: border-box;
+
+    .content-hander {
+        display: inline-block;
+        border-bottom: 1px solid #ebecec;
+        line-height: 63px;
+        color: #575962;
+        width: 100%;
+        font-weight: bold;
+        font-size: 20px;
+        border-bottom: 1px solid #ebecec;
+        margin-bottom: 24px;
+    }
+   
+   .view-lf, .view-rg {
+        height: 100%;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        border-radius: 8px;
+        background-color: #fff;
+        box-shadow: 0px 4px 14px 0px rgba(42, 42, 42, 0.14);
+        position: relative;
+    }
+    .view-lf {
+        width: 55%;
+    }
+    .view-rg {
+        width: calc(45% - 20px);
+    }
+    .lf-title {
+        margin-bottom: 24px;
+        .lf-input  {
+            width: 240px;
+            margin: 0 16px;
+        }
+        .el-select  {
+            width: 150px;
+        }
+        .cut-system  {
+            float: right;
+            line-height: 31px;
+            cursor: pointer;
+            &:hover {
+                color: #2a73f2;
+            }
+        }
+    }
+    .lf-card {
+        margin-top: 10px;
+        height: calc(100% - 148px);
+        & > div {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-gap: 10px;
+        }
+    }
+}
+// 系统监控
+.view-content-monitor {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    .content-hander {
+        display: inline-block;
+        border-bottom: 1px solid #ebecec;
+        line-height: 63px;
+        color: #575962;
+        width: 100%;
+        font-weight: bold;
+        font-size: 20px;
+        border-bottom: 1px solid #ebecec;
+        margin-bottom: 24px;
+    }
+    .monitor-top {
+        display: flex;
+        justify-content: space-between;
+        height: 460px;
+        .monitor-top-lf, .monitor-top-rg {
+            height: 100%;
+            padding: 10px 20px;
+            box-sizing: border-box;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0px 4px 14px 0px rgba(42, 42, 42, 0.14);
+            .fz-xxm {
+                line-height: 38px;
+            }
+        }
+        .monitor-top-lf {
+            // width: 55%;
+            width: calc(100% - 546px);
+
+        }
+        .monitor-top-rg {
+            // width: calc(45% - 20px);
+            width: 526px;
+        }
+    }
+    // 节点详情
+    .monitor-top-rg {
+        .ip {
+            border-top: 1px solid #ebecec;
+            border-bottom: 1px solid #ebecec;
+            margin: 10px 0  16px 0;
+            padding: 10px 0;
+            p {
+                line-height: 40px;
+                i {
+                    display: inline-block;
+                    width: 24px;
+                    height: 24px;
+                    vertical-align: middle;
+                    margin-right: 10px;
+                    background: url('@/assets/images/node/node_icon.png') no-repeat;
+
+                }
+            }
+        }
+        .ip-chart {
+            i {
+               display: inline-block;  
+               vertical-align: middle;
+               width: 37px;
+               height: 37px;
+               margin-right: 16px;
+            }
+            .text-nomal {
+                font-weight: bold;
+            }
+            .chart-memory, .chart-cpu >p {
+                line-height: 42px;
+                margin-bottom: 5px;
+                margin: 10px 0;
+            }
+            .chart-memory {
+                &>p { margin-bottom: 10px; }
+                // i {
+                //     background: url('@/assets/images/view/memory_nomal.png') no-repeat;
+                // }
+            }
+            
+            .chart-cpu {
+                // i {
+                //     background: url('@/assets/images/view/cpu_nomal.png') no-repeat;
+                // }
+            }
+
+            .progress-nolmal {
+                .cpu-icon  i {
+                   background: url('@/assets/images/node/cpu_nolmal.png') no-repeat;
+                }
+                .memory-icon i {
+                   background: url('@/assets/images/node/memory_nolmal.png') no-repeat;
+                }
+                .text-nomal {
+                    color: #1869f5;
+                }
+            }
+            .progress-general {
+                .cpu-icon  i {
+                    background: url('@/assets/images/node/cpu_general.png') no-repeat;
+                }
+                .memory-icon i {
+                    background: url('@/assets/images/node/memory_general.png') no-repeat;
+                }
+                .text-nomal {
+                    color: #f79b1a;
+                }
+            }
+            .progress-waring {
+                .cpu-icon i {
+                    background: url('@/assets/images/node/cup_waring.png') no-repeat;
+                 }
+                 .memory-icon i {
+                    background: url('@/assets/images/node/memory_waring.png') no-repeat;
+                 }
+                 span {
+                     color: #f02f2f;
+                 }
+                .text-nomal {
+                    color: #f02f2f;
+                }
+            }
+    
+        }
+        .card-info {
+            width: 100%;
+            height: 127px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            align-self: center;
+            padding: 18px;
+            box-sizing: border-box;
+            margin-top: 20px;
+            color: #333;
+            .title-text {
+                color: #8d9498;
+            }
+           .card-info-system{
+                display: flex;
+                align-items: center;
+                height: 40px;
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    height: 100%;
+                    width: 48%;
+                }
+                // div:nth-child(2),div:nth-child(3) {
+                //     padding: 0 30px;
+                // }
+                // div + div {
+                //     border-left: 1px solid #c1c8cc;
+                // }
+            }
+            .card-info-proce {
+                margin-top: 8px;
+                p {
+                    line-height: 20px;
+                }
+            }
+    
+        }
+    }
+    .monitor-bootom {
+        height: calc(100% - 480px);
+        padding: 10px 20px;
+        box-sizing: border-box;
+        border-radius: 8px;
+        background-color: #fff;
+        box-shadow: 0px 4px 14px 0px rgba(42, 42, 42, 0.14);
+        .title {
+            border-bottom: 1px solid #ebecec;
+            padding: 10px 0 16px;
+        }
+        .log-handle {
+            margin-top: 18px;
+            display: flex;
+            justify-content: space-between;
+            .space-lfspace {
+                margin-left: 32px ;
+              }
+            .select-title {
+                display: inline-block;
+                font-size: 16px;
+                line-height: 30px;
+                color: #333333;
+                margin-right: 15px;
+            }
+            .search-btn {
+                display: inline-block;
+                cursor: pointer;
+                color: #fff;
+                line-height: 32px;
+                padding: 0 11px;
+                background-color: #1f88fe;
+                border-radius: 3px;
+                font-size: 16px;
+                margin-left: 24px;
+                &:hover {
+                    background-color: #0675f1;
+                }
+                .el-icon {
+                    vertical-align: middle;
+                }
+            }
+            .seach-input .el-input{
+                width: 290px;
+                .el-input__wrapper {
+                    border-radius: 16px;
+                }
+            }
+        }
+        .log-main {
+            height: 220px;
+            border-radius: 3px;
+            margin-top: 12px;
+            border: solid 1px #e1e3e4;
+            .contant {
+                height: calc(100% - 40px);
+            }
+            .log-main-foot {
+                height: 40px;
+                background-color: #f5f5f5;
+                border-radius: 0px 0px 3px 3px;
+                padding: 0 18px;
+                box-sizing: border-box;
+                span {
+                    display: inline-block;
+                    line-height: 40px;
+                    color: #0675f1; 
+                    cursor: pointer;
+                    & + span {
+                        margin-left: 16px;
+                    }
+                }
+            }
+        }
+    }
+}

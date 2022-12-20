@@ -1,0 +1,256 @@
+/** 
+*
+*>>>>>此处修改会影响全局样式
+*
+**/
+$fontSize_s: 12px;
+$fontSize_xs: 14px;
+$fontSize_m: 16px;
+$fontSize_xm: 18px;
+$fontSize_xxm: 20px;
+$fontSize_l: 24px;
+$fontSize_xl: 32px;
+$fontSize_xxl: 48px;
+
+$--color-white: #fff !default;
+$--color-bg-sec-dialog: rgba(212, 222, 255, 0.12);
+$--color-bg-item-active: rgba(212, 222, 255, 0.2);
+$backImgColor: #50669f;
+$backImgMoveColor: lighten(#50669f, 10%);
+$--color-btn: #50669f;
+
+
+/* 一行截断 */
+.ellipsis , .ellipsis .h-input__inner {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    vertical-align: middle;
+    white-space: nowrap;
+    word-wrap: normal;
+    word-break: normal;
+}
+// 滚动
+.contant-scroll {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        width: 0px;
+        background-color: white;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: #b8c4d5 ;
+        border-radius: 3px;
+        box-shadow:none;
+      }
+      &::-webkit-scrollbar-track{
+        box-shadow:none;
+        // background-color: #f7f9fb;
+      }
+}
+
+// 右外边距为16px
+.space-biggerlrspace {
+  margin-right: 16px ;
+}
+// 右外边距为8px
+.space-lrspace {
+  margin-right: 8px ;
+}
+
+
+
+// font
+.fz-sm {
+  font-size: $fontSize_s;     // 文字大小12px
+}
+.fz-mid {
+  font-size: $fontSize_xs;     // 文字大小14px
+}
+.fz-m {
+  font-size: $fontSize_m;     // 文字大小16px
+}
+.fz-xm {
+  font-size: $fontSize_xm;     // 文字大小18px
+}
+.fz-xxm {
+  font-size: $fontSize_xxm;     // 文字大小20px
+}
+.fz-l {
+  font-size: $fontSize_l;     // 文字大小24px
+}
+.fz-xl {
+  font-size: $fontSize_xl;     // 文字大小32px
+}
+.fz-xxl {
+  font-size: $fontSize_xxl;     // 文字大小48px
+  
+}
+
+// -------头部icon
+.title-icon {
+  display: inline-block;
+  position: relative;
+  margin-right: 8px;
+  width: 6px;
+  height: 18px;
+  vertical-align: text-bottom;
+  &::after {
+    display: block;
+    position: absolute;
+    top: 0;
+    content: '';
+    width: 6px;
+    height: 11px;
+    background-color: #5c5d5e;
+  }
+  &::before {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    content: '';
+    width: 6px;
+    height: 5px;
+    background-color: #00d2ff;
+  }
+}
+
+
+// --------btn按钮
+.btn {
+  display: inline-block;
+  text-align: center;
+  font-size: $fontSize_xs;
+  line-height: 30px;
+  padding: 0 15px;
+  color: $--color-white;
+  margin-right:10px;
+  min-width: 78px;
+  box-sizing: border-box;
+  cursor: pointer;
+  border-radius: 4px;
+  i {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      vertical-align: middle;
+  }
+}
+.sm-btn {
+  display: inline-block;
+  text-align: center;
+  font-size: $fontSize_xs;
+  line-height: 20px;
+  padding: 0 5px;
+  color: $--color-white;
+  margin-right:10px;
+  min-width: 40px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.btn-primary {
+  @extend .btn;
+    background-color: #1f88fe;
+  &:hover{
+    background-color: #0675f1;
+  }
+
+}
+.btn-cancel {
+  @extend .btn;
+    background-color: #c1cedb;
+  &:hover{
+    background-color: #1f88fe;
+  }
+}
+.green-sm-btn {
+  @extend .sm-btn;
+  background-color: #09aa02;
+}
+
+.btn-default {    //常态
+  @extend .btn;
+  background-color: #fff;
+  color: #73777a;
+  border: solid 1px #d9dbdb;
+  &:hover{
+    color: #fff;
+    background-color: #0675f1;
+    border: solid 1px #0675f1;
+  }
+}
+
+.btn-bule {      // 蓝色
+  @extend .btn;
+  background-color: $backImgColor;
+  &:hover{
+    background-color: $backImgMoveColor;
+  }
+}
+
+
+.btn-disable {      // 禁用
+  @extend .btn;
+  background-color: #f4f4f4;
+  color: #a8a8a8;
+  border: solid 1px #f4f4f4;
+  cursor: not-allowed;
+  &:hover{
+    color: #a8a8a8;
+    background-color: #f4f4f4;
+    border: solid 1px #f4f4f4;
+  }
+}
+// --------点击字体
+
+.text {
+  cursor: pointer;
+  margin-right: 16px;
+}
+.text-default {
+  @extend .text;
+  color: #2a73f2;
+  &:hover {
+    color: #1b5dd1;
+    text-decoration: underline;
+  }
+}
+
+.text-stop {
+  @extend .text;
+  color: #e84141;
+  &:hover {
+    color: #bd2f2f;
+    text-decoration: underline;
+
+  }
+}
+
+.text-destroy {
+  @extend .text;
+  color: #e88c41;
+  &:hover {
+    color: #be6b26;
+    text-decoration: underline;
+
+  }
+}
+.text-warn { // 警告
+  @extend .text;
+  color: #e84141;
+  &:hover {
+    color: #c52b2b;
+    text-decoration: underline;
+
+  }
+}
+
+.text-remind { // 提示
+  @extend .text;
+  color: #e88c41;
+  &:hover {
+    color: #b36628;
+    text-decoration: underline;
+  }
+}

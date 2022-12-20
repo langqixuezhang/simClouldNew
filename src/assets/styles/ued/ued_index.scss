@@ -1,0 +1,187 @@
+.box {
+    position: relative;
+    display: flex;  
+    width: 100%;
+    height:100%;
+    overflow: hidden;
+    .box-title {
+        width: 250px;
+        .logo {
+            color: #fff;
+            text-align: center;
+            height: 60px;
+            font-size: 23px;
+            background-color: #3a80f9;
+            line-height: 60px;
+            // background: url('@/assets/images/common/logo.png') no-repeat;
+        }
+        .title-info {
+            padding:0 16px;
+            background-color: #ffffff;
+            position: relative;
+            z-index: 1;
+            height: calc(100% - 60px);
+            box-shadow: 0px 0px 16px 0px rgba(112, 112, 112, 0.26);
+
+            &>span {
+                display: block;
+                line-height: 20px;
+                padding:20px 0;
+                margin-bottom: 10px;
+                border-bottom: 1px solid  #f1f1f1;
+                display: flex;
+                justify-content: row;
+                align-items: center;
+                i {
+                    display: inline-block;
+                    width: 50px;
+                    height: 35px;
+                    background: url('@/assets/images/common/title_logo.png') no-repeat;
+                }
+            }
+            a {
+                display: block;
+                text-decoration: none;
+                line-height: 46px;
+                color: #8d9498;
+                padding: 0 32px;
+                & > i {
+                    display: inline-block;
+                    width: 20px;
+                    height: 20px;
+                    vertical-align: sub;
+                    & + span {
+                        margin-left: 10px
+                    }
+                }
+                .overview {
+                    background: url('@/assets/images/common/overview_nomal.png') no-repeat;
+                }
+                .manage {
+                    background: url('@/assets/images/common/manage_nomal.png') no-repeat;
+                }
+                .node {
+                    background: url('@/assets/images/common/node_nomal.png') no-repeat;
+                }
+            }
+        
+           
+            .tab-active {
+                width: 100%;
+                background-color: #2a73f2;
+                box-shadow: 1px 2px 6px 0px 
+                    rgba(27, 71, 127, 0.34);
+                border-radius: 5px;
+                color: #ffffff;
+                box-sizing: border-box;
+                .overview {
+                    background: url('@/assets/images/common/overview_hover.png') no-repeat;
+                }
+                .manage {
+                    background: url('@/assets/images/common/manage_hover.png') no-repeat;
+                }
+                .node {
+                    background: url('@/assets/images/common/node_hover.png') no-repeat;
+                }
+             }
+            .scalong-btn {
+                width: 218px;
+                cursor: pointer;
+                background-color: #f5f7fa;
+                border-radius: 5px;
+                position:  fixed;
+                bottom: 30px;
+                text-align: center;
+                line-height: 40px;
+                i {
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: 18px;
+                    height: 18px;
+                    background: url('@/assets/images/common/navigation_nomal.png') no-repeat;
+                }
+                &:hover i {
+                    background: url('@/assets/images/common/navigation_hover.png') no-repeat;
+                }
+            }
+            .scalong-sm-btn {
+                width:40px;
+                i {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+    .box-sm-title {
+        width: 78px;
+        .title-info a {
+            padding: 0;
+            text-align: center;
+        }
+    }
+
+    .box-main {
+       background-color: rgb(227, 233, 240);  
+       width:calc(100% - 250px);
+       box-sizing:border-box;
+       position: relative;
+       overflow: hidden;
+        .mian-title {
+            width: 100%;
+            height: 60px;
+            background-color: #2b71ea;
+            position: relative;
+            box-shadow: 0px 0px 10px 0px rgba(42, 42, 42, 0.5);
+        }
+        .content-head {
+            height: 250px;
+            padding: 18px 30px;
+            box-sizing: border-box;
+            color: #fff;
+            background-image: linear-gradient(90deg, #2e72e9 0%, #2757aa 100%);
+            span {
+                cursor: pointer;
+                i {
+                    display: inline-block;
+                    width: 20px;
+                    height: 20px;
+                    position: relative;
+                    top: 5px;
+                }
+                .view_icon {
+                    background: url('@/assets/images/common/overview_hover.png') no-repeat;
+                }
+                .manage_icon {
+                    background: url('@/assets/images/common/manage_hover.png') no-repeat;
+                }
+                .node_icon {
+                    background: url('@/assets/images/common/node_hover.png') no-repeat;
+                }
+            }
+        }
+        .content {
+            position: absolute; 
+            overflow: hidden;
+            border-radius: 8px;
+            // background-color: rgb(227, 233, 240);  
+            // background-color: #f2f2f2;  
+            box-shadow: 0px 4px 14px 0px rgba(102, 60, 60, 0.14);
+            height: calc(100% - 140px);
+            width: calc(100% - 60px);
+            margin: 0 auto;
+            top: 120px;
+            left: 0;
+            right: 0;
+            .content-title {
+                display: inline-block;
+                padding-left: 34px;
+                border-bottom: 1px solid #ebecec;
+                line-height: 63px;
+                width: 100%;
+            }
+        }
+    }
+    .box-sm-main {
+       width:calc(100% - 78px);
+    }
+}
